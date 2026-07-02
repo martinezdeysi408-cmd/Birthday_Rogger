@@ -45,7 +45,7 @@
 <p id="typingText"></p>
 <h2>Roger Dayan Mendieta Barrera</h2>
 
-<img src="assets/roger.jpg" class="photo">
+<img src="./assets/roger.jpg.jpeg" class="photo" alt="Roger">
 
 <p class="quote">
 
@@ -178,7 +178,7 @@ Forever Yours,
 
     <h2>Someone is waiting for you...</h2>
 
-    <img src="assets/deysi.jpg" class="photo">
+<img src="./assets/deysi.jpg.jpeg" class="photo" alt="Deysi">
 
     <p>
 
@@ -198,7 +198,6 @@ Forever Yours,
 
     </p>
 
-</section>
 </section>
 
 <!-- COUNTDOWN -->
@@ -309,45 +308,19 @@ Close
 
 </button>
 
-</div>//======================================
-// PETALOS DE ROSA
-//======================================
+</div>
 
-function createPetal(){
-
-    const petal=document.createElement("div");
-
-    petal.className="petal";
-
-    petal.innerHTML="🌸";
-
-    petal.style.left=Math.random()*100+"vw";
-
-    petal.style.animationDuration=(7+Math.random()*6)+"s";
-
-    petal.style.fontSize=(18+Math.random()*18)+"px";
-
-    document.body.appendChild(petal);
-
-    setTimeout(()=>{
-
-        petal.remove();
-
-    },13000);
-
-}
-
-setInterval(createPetal,900);
 <!-- ===========================
      BOTÓN VOLVER ARRIBA
 =========================== -->
 
 <button id="backToTop" title="Go to top">⬆️</button>
-<script src="script.js"></script>
 
-</body>
-<!-- Barra de progreso -->
 <div id="progress-container">
     <div id="progress-bar"></div>
 </div>
+
+<script src="script.js"></script>
+
+</body>
 </html>
