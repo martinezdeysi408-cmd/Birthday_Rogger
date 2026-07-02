@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Roger ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div id="hearts"></div>
+
+<!-- INTRO -->
+
+<section id="intro">
+
+<h1>I have something to tell you...</h1>
+
+<p>❤️</p>
+
+<button id="startBtn">Open</button>
+
+</section>
+
+<!-- HERO -->
+
+<section id="hero">
+
+<h1>Happy Birthday</h1>
+<p id="typingText"></p>
+<h2>Roger Dayan Mendieta Barrera</h2>
+
+<img src="assets/roger.jpg" class="photo">
+
+<p class="quote">
+
+No matter how many miles separate us...
+
+my heart has never been far from yours.
+
+</p>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map">
+
+<h2>From Nicaragua 🇳🇮 to United States 🇺🇸</h2>
+
+<div class="line">
+
+🇳🇮 ---------------- ❤️ ---------------- 🇺🇸
+
+</div>
+
+<p>
+
+Different countries.
+
+Different skies.
+
+Same moon.
+
+</p>
+
+</section>
+
+<!-- LETTER -->
+
+<section class="letter">
+
+<h2>💌 A Letter For You</h2>
+
+<p>
+
+My dearest Roger,
+
+Happy Birthday, my love.
+
+</p>
+
+<p>
+
+Sometimes I wish I could stop time
+
+just long enough to hug you today.
+
+</p>
+
+<p>
+
+Desde que llegaste a mi vida
+
+todo comenzó a sentirse más bonito.
+
+</p>
+
+<p>
+
+Gracias por escucharme,
+
+por hacerme sonreír
+
+y por demostrarme que la distancia
+
+no es más fuerte que el cariño.
+
+</p>
+
+<p>
+
+I don't know exactly when
+
+we'll finally meet...
+
+</p>
+
+<p>
+
+But I know...
+
+it will be worth every second
+
+we've waited.
+
+</p>
+
+<p class="special">
+
+Te espero con ansias.
+
+Cada día cuento uno menos
+
+para poder abrazarte,
+
+verte sonreír frente a mí,
+
+escuchar tu voz de cerca
+
+y comenzar todos los recuerdos
+
+que aún nos faltan por vivir.
+
+❤️
+
+</p>
+
+<p>
+
+Forever Yours,
+
+<br>
+
+<b>Deysi</b>
+
+</p>
+<!-- ===========================
+     DEYSI
+=========================== -->
+
+<section id="deysi">
+
+    <h2>Someone is waiting for you...</h2>
+
+    <img src="assets/deysi.jpg" class="photo">
+
+    <p>
+
+        Every smile in this picture
+
+        is saving a hug for you.
+
+    </p>
+
+    <p class="special">
+
+        I'll be waiting for you.
+
+        With all my heart.
+
+        ❤️
+
+    </p>
+
+</section>
+</section>
+
+<!-- COUNTDOWN -->
+
+<section class="count">
+
+<h2>⏳</h2>
+
+<h3>Every second is one second closer to meeting you.</h3>
+
+<div id="counter"></div>
+<div id="clock"></div>
+</section>
+
+<!-- SECRET -->
+
+<section id="moonSection">
+
+🌙
+
+<p>
+
+Click the moon...
+
+</p>
+
+</section>
+
+<!-- FINAL -->
+
+<section id="final">
+
+<h1>Roger...</h1>
+
+<p>
+
+One day...
+
+this won't be a website anymore.
+
+</p>
+
+<p>
+
+It will be me...
+
+standing in front of you.
+
+</p>
+
+<p>
+
+Finally saying...
+
+</p>
+
+<h2>❤️ Happy Birthday ❤️</h2>
+
+<p>
+
+I'm here.
+
+</p>
+
+<p>
+
+Until that day...
+
+I'll keep waiting for you
+
+with all my heart.
+
+</p>
+
+<p>
+
+Te espero con ansias.
+
+</p>
+
+<h3>
+
+Made with all my love
+
+<br>
+
+Deysi ❤️
+
+</h3>
+
+</section>
+
+<div id="popup" class="hidden">
+
+🌙
+
+<p>
+
+Look at the moon whenever you miss me.
+
+I'll probably be looking at it too.
+
+</p>
+
+<button id="closePopup">
+
+Close
+
+</button>
+
+</div>//======================================
+// PETALOS DE ROSA
+//======================================
+
+function createPetal(){
+
+    const petal=document.createElement("div");
+
+    petal.className="petal";
+
+    petal.innerHTML="🌸";
+
+    petal.style.left=Math.random()*100+"vw";
+
+    petal.style.animationDuration=(7+Math.random()*6)+"s";
+
+    petal.style.fontSize=(18+Math.random()*18)+"px";
+
+    document.body.appendChild(petal);
+
+    setTimeout(()=>{
+
+        petal.remove();
+
+    },13000);
+
+}
+
+setInterval(createPetal,900);
+<!-- ===========================
+     BOTÓN VOLVER ARRIBA
+=========================== -->
+
+<button id="backToTop" title="Go to top">⬆️</button>
+<script src="script.js"></script>
+
+</body>
+<!-- Barra de progreso -->
+<div id="progress-container">
+    <div id="progress-bar"></div>
+</div>
+</html>

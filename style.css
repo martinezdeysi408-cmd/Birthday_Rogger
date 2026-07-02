@@ -1,0 +1,751 @@
+/* ===========================
+   FUENTES Y CONFIGURACIÓN
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(to bottom,#020111,#071330,#0d1b3d);
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   ESTRELLAS
+=========================== */
+
+#stars{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    background-image:
+    radial-gradient(white 1px, transparent 1px);
+
+    background-size:50px 50px;
+
+    opacity:.35;
+
+    z-index:-2;
+
+}
+
+/* ===========================
+   SECCIONES
+=========================== */
+
+section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+/* ===========================
+   TÍTULOS
+=========================== */
+
+h1,h2{
+
+    font-family:'Cinzel',serif;
+
+}
+
+h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
+}
+
+p{
+
+    max-width:750px;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+    margin:15px;
+
+}
+
+/* ===========================
+   BOTÓN
+=========================== */
+
+button{
+
+    margin-top:30px;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#ff5fa2;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.1);
+
+    background:#ff3b89;
+
+}
+
+/* ===========================
+   FOTO
+=========================== */
+
+.photo{
+
+    width:270px;
+
+    height:270px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin:35px 0;
+
+    border:5px solid white;
+
+    box-shadow:0 0 35px rgba(255,255,255,.6);
+
+}
+
+/* ===========================
+   CARTA
+=========================== */
+
+.letter{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:25px;
+
+    width:90%;
+
+    max-width:950px;
+
+    margin:auto;
+
+    padding:50px;
+
+}
+
+.special{
+
+    color:#ffd166;
+
+    font-size:23px;
+
+    font-weight:bold;
+
+}/* ===========================
+   CORAZONES FLOTANDO
+=========================== */
+
+#hearts{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.heart{
+    position:absolute;
+    color:#ff6fae;
+    font-size:22px;
+    animation:floatHeart linear infinite;
+    opacity:.8;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        transform:translateY(100vh) scale(.8);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120px) scale(1.3);
+        opacity:0;
+    }
+
+}
+
+/* ===========================
+   INTRO
+=========================== */
+
+#intro h1{
+
+    animation:fadeIn 3s ease;
+
+}
+
+#intro p{
+
+    font-size:40px;
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* ===========================
+   FOTO
+=========================== */
+
+.photo:hover{
+
+    transform:scale(1.05);
+
+    transition:.5s;
+
+    box-shadow:0 0 60px #ffd166;
+
+}
+
+/* ===========================
+   FINAL
+=========================== */
+
+#final{
+
+    background:rgba(0,0,0,.35);
+
+}
+
+#final h2{
+
+    color:#ffd166;
+
+    margin:25px;
+
+}
+
+#final h3{
+
+    margin-top:40px;
+
+    color:#ff9ec9;
+
+}/* ===========================
+   POPUP (MENSAJE DE LA LUNA)
+=========================== */
+
+.hidden{
+    display:none;
+}
+
+#popup{
+
+    position:fixed;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:rgba(10,10,30,.95);
+
+    border:2px solid #ffd166;
+
+    border-radius:25px;
+
+    width:90%;
+    max-width:500px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 0 35px rgba(255,209,102,.5);
+
+    z-index:9999;
+
+}
+
+#popup p{
+
+    font-size:22px;
+
+}
+
+#popup button{
+
+    margin-top:25px;
+
+}
+
+/* ===========================
+   CONTADOR
+=========================== */
+
+#counter{
+
+    font-size:38px;
+
+    color:#ffd166;
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   LUNA
+=========================== */
+
+#moonSection{
+
+    cursor:pointer;
+
+    font-size:70px;
+
+    transition:.4s;
+
+}
+
+#moonSection:hover{
+
+    transform:scale(1.15);
+
+}/* ===========================
+   ANIMACIONES
+=========================== */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1.2s;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================
+   BRILLO
+=========================== */
+
+.glow{
+
+    text-shadow:
+
+    0 0 10px white,
+
+    0 0 20px #ffd166,
+
+    0 0 40px #ffd166;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+#hero h1{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   SCROLL
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ffd166;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0a0d21;
+
+}#moon{
+
+    font-size:120px;
+
+    animation:moonFloat 5s ease-in-out infinite;
+
+    filter:drop-shadow(0 0 25px rgba(255,255,200,.8));
+
+}
+
+@keyframes moonFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}/*======================================
+PETALOS DE ROSA
+======================================*/
+
+.petal{
+
+    position:fixed;
+
+    top:-50px;
+
+    color:#ff7aa8;
+
+    font-size:22px;
+
+    pointer-events:none;
+
+    animation:fallPetal linear forwards;
+
+    z-index:0;
+
+}
+
+@keyframes fallPetal{
+
+    0%{
+
+        transform:
+        translateY(-60px)
+        rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(110vh)
+        translateX(120px)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}/*======================================
+ONE LAST SURPRISE
+======================================*/
+
+#surprise{
+
+    background:rgba(255,255,255,.05);
+
+}
+
+#cinema{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:black;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.cinema-content{
+
+    width:90%;
+
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+#cinemaText{
+
+    font-size:55px;
+
+    line-height:1.5;
+
+    color:white;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.hidden{
+
+    display:none;
+
+}/*======================================
+BARRA DE PROGRESO
+======================================*/
+
+#progress-container{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:rgba(255,255,255,.15);
+
+    z-index:999999;
+
+}
+
+#progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(to right,#ff5fa2,#ffd166);
+
+    transition:width .2s;
+
+}/*======================================
+EFECTO DE ESCRITURA
+======================================*/
+
+#typingText{
+
+    font-size:24px;
+
+    color:#ffd166;
+
+    margin:15px 0 30px;
+
+    min-height:35px;
+
+    letter-spacing:1px;
+
+    font-style:italic;
+
+}/*======================================
+DEYSI
+======================================*/
+
+#deysi{
+
+background:rgba(255,255,255,.04);
+
+}
+
+#deysi img{
+
+margin-top:30px;
+
+margin-bottom:25px;
+
+}/*======================================
+BOTÓN VOLVER ARRIBA
+======================================*/
+
+#backToTop{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:rgba(255,95,162,.9);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:9999;
+
+    box-shadow:0 0 20px rgba(255,95,162,.6);
+
+    transition:.3s;
+
+}
+
+#backToTop:hover{
+
+    transform:scale(1.1);
+
+}/*======================================
+RELOJ
+======================================*/
+
+#clock{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    color:#ffffff;
+
+    letter-spacing:2px;
+
+    opacity:.8;
+
+}
